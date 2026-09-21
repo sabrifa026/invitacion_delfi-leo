@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delfi&Leo</title>
+    <link rel="shortcut icon" href="img/img_del-leo_favicon.jpg" type="image/jpg">
+    <meta name="description" content="Invitación Casamiento Delfi&Leo">
+    <meta name="author" content="Sabrina Farias">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!---- LINK CSS ---->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!---- TPGs ---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Corinthia:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!---- POP UP TARJETA ---->
+    <div id="bienvenida-overlay" class="bienvenida-overlay">
+        <div class="postal">
+            <div class="postal-image">
+            <img src="img/img_del-leo_postal.png" alt="Postal de invitación" class="postal-img">
+            <button id="enter-btn" class="welcome-btn">ABRIR INVITACIÓN</button>
+            </div>
+        </div>
+    </div>
+
+
+<!---- INICIO DEL MAIN---->
+    <main>
+    <!---- SECCIÓN 1 | HERO BANNER ---->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-image-container"><img src="img/img_del-leo_logo.png" alt="Delfi & Leo" class="hero-img"></div>
+                <h1 class="hero-title">Delfi & Leo</h1>
+                <p class="hero-subtitle">22 • 11 • 2026 | Hurlingham</p>
+                <div class="hero-bajada">✈️ PRÓXIMO DESTINO: NUESTRO CASAMIENTO</div>
+            </div>
+        </section>
+
+    <!---- SECCIÓN 2 | NOS CASAMOS ---->
+        <section class="nosCasamos">
+            <div class="info-container">
+                <div class="icon-container">
+                    <img src="img/img_del-leo_icon-cora.png" alt="Icono corazones" class="icon">
+                </div>
+                <h2 class="frase">Hay momentos que se vuelven inolvidables cuando tenemos con quién compartirlos</h2>
+                <p class="txt">Queremos que seas parte de uno de los días más importantes de nuestra historia...</p>
+            </div>
+        </section>
+
+    <!---- SECCIÓN 3 | NUESTRO VIAJE ---->
+        <section class="nuestroViaje">
+            <div class="nuestroViaje-container">
+                <h2 class="titulo">Nuestro Viaje</h2>
+                
+                <div class="galeria-grid">
+                    <div class="foto-item foto-chica-1"><img src="img/img_del-leo_galeria-1.jpg" alt="Foto 1"></div>
+                    <div class="foto-item foto-chica-2"><img src="img/img_del-leo_galeria-2.jpg" alt="Foto 2"></div>
+                    <div class="foto-item foto-grande-1"><img src="img/img_del-leo_galeria-3.jpg" alt="Foto 3"></div>
+
+                    <div class="foto-item foto-grande-2"><img src="img/img_del-leo_galeria-4.jpg" alt="Foto 4"></div>
+                    <div class="foto-item foto-chica-3"><img src="img/img_del-leo_galeria-5.jpg" alt="Foto 5"></div>
+                    <div class="foto-item foto-chica-4"><img src="img/img_del-leo_galeria-6.jpg" alt="Foto 6"></div>
+
+                    <div class="foto-item foto-banner-final">
+                        <div class="banner-img-bg"></div>
+                        <div class="banner-overlay"></div>
+                        <div class="banner-content">
+                        <p class="banner-frase">"Y un día, decidimos que nuestro próximo viaje sea para siempre"</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!---- SECCIÓN 4 | INVITACIÓN ---->
+        <section class="invitacion">
+            <div class="info-container">
+                <div class="icon-container">
+                    <img src="img/img_del-leo_icon-invite.png" alt="Icono casamiento" class="icon">
+                </div>
+                <h2 class="frase">Delfi & Leo</h2>
+                <p class="txt">Nos vemos para celebrar el comienzo de nuestra próxima aventura:</p>
+
+                <!-- Bloque de fecha y ubicación integrada correctamente -->
+                <div class="fu-container">
+                    <div class="fecha-bloque">
+                        <div class="fecha-columna"><span class="fecha-texto-secundario">Sábado</span></div>
+                        <div class="fecha-divisor"></div>
+                        <div class="fecha-columna fecha-central"><span class="fecha-numero">22</span><span class="fecha-mes">Noviembre</span></div>
+                        <div class="fecha-divisor"></div>
+                        <div class="fecha-columna"><span class="fecha-texto-secundario">18:00-03:00</span></div>
+                    </div>
+                    <div class="ubicacion-bloque">
+                        <h3 class="ubicacion-lugar">Janos de Hurlingham</h3>
+                        <p class="ubicacion-direccion">General Pedro Díaz 1639</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/3cCSUnaU6ooZmsRn8" target="_blank" class="btn-mapa">Ver ubicación en mapa</a>
+                </div>
+            </div>
+        </section>
+
+    <!---- SECCIÓN 5 | CUENTA REGRESIVA Y DRESSCODE ---->
+        <section class="cuentaRegresiva">
+            <div class="info-container">
+                <h2 class="titulo">Agendá la fecha</h2>
+
+                <div class="countdown-container">
+                    <!-- Días -->
+                    <div class="time-block">
+                        <span class="number" id="days">00</span>
+                        <span class="label">días</span>
+                    </div>
+
+                    <div class="separator">:</div>
+
+                    <!-- Horas -->
+                    <div class="time-block">
+                        <span class="number" id="hours">00</span>
+                        <span class="label">hs</span>
+                    </div>
+
+                    <div class="separator">:</div>
+
+                    <!-- Minutos -->
+                    <div class="time-block">
+                        <span class="number" id="minutes">00</span>
+                        <span class="label">min</span>
+                    </div>
+
+                    <div class="separator">:</div>
+
+                    <!-- Segundos -->
+                    <div class="time-block">
+                        <span class="number" id="seconds">00</span>
+                        <span class="label">seg</span>
+                    </div>
+                </div>
+
+                <p class="txt dresscode-txt">✨ Dresscode: Elegante ✨</p>
+            </div>
+        </section>
+
+    <!---- SECCIÓN 6 | RSVP ---->
+        <section class="invitacion">
+            <div class="info-container">
+                <h2 class="frase">¿Venís?</h2>
+                <p class="txt">Esperamos compartir este día con vos. Confirmá tu asistencia.</p>
+
+                <div class="rsvp-card">
+                    <form id="rsvpForm">
+                    <!-- Campo 1: Nombre y Apellido -->
+                    <div class="field-group">
+                        <label class="field-label txt">Nombre y Apellido</label>
+                        <input type="text" name="nombre" class="input-text" placeholder="Tu nombre completo" required>
+                    </div>
+
+                    <!-- Campo 2: Asistencia -->
+                    <div class="field-group">
+                        <label class="field-label txt">¿Asistís?</label>
+                        <div class="radio-row">
+                        <label class="radio-option">
+                            <input type="radio" name="asistira" value="Sí voy" checked>
+                            <div class="radio-btn-ui txt">Sí, voy 💛</div>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="asistira" value="No voy">
+                            <div class="radio-btn-ui txt">No voy a poder</div>
+                        </label>
+                        </div>
+                    </div>
+
+                    <!-- Campo 3: Mensajito -->
+                    <div class="field-group">
+                        <label class="field-label txt">Dejanos un mensajito</label>
+                        <textarea name="mensaje" class="text-area" placeholder="Escribinos algo o contános que canción no puede faltar esa noche..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">GUARDAR RESPUESTA</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    <!---- SECCIÓN 7 | REGALOS ---->
+        <section class="regalos">
+            <div class="info-container">
+                <div class="icon-container">
+                    <img src="img/img_del-leo_icon-regalo.png" alt="Icono Regalos" class="icon">
+                </div>
+                <p class="txt">Tu presencia es lo más importante. Si además querés hacernos un regalo te compartimos nuestro alias.</p>
+
+                <div class="gift-container">
+                    <div class="alias-section">
+                        <div class="copy-box">
+                            <span class="copy-text" id="aliasText">casamiento.leo.delfi</span>
+                            <button class="copy-btn" onclick="copyAlias(this)">COPIAR</button>
+                        </div>
+                    </div>
+                    <div class="plain-data">
+                        <div class="data-line"><strong>A nombre de:</strong> Leonel Nicolas Carrasco</div>
+                        <div class="data-line"><strong>CBU:</strong> 0150806001000139657437</div>
+                        <div class="data-line"><strong>CUIL/CUIT:</strong> 20380403219</div>
+                        <div class="data-line"><strong>Cuenta:</strong> CA $ 0806/01139657/43</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!---- AUDIO DE FONDO ---->
+    <audio id="background-audio" src="audio/ordinary.mp3" preload="auto" loop></audio>
+
+<!---- SCRIPTS ---->
+    <script src="scripts/script.js"></script>
+</body>
+</html>

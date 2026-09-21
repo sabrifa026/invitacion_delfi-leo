@@ -1,0 +1,748 @@
+/* ---- RESET ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---- COLORES ---- */
+:root {
+  --color-primario: #f9f5ed;
+  --color-secundario: #3a302f;
+  --color-acento-oscuro: #7b5500;
+  --color-acento-claro: #baa577;
+}
+
+/* ---- ESTILOS GENERALES ---- */
+body {
+  background-color: var(--color-primario);
+}
+
+/* ---- POP UP TARJETA ---- */
+.bienvenida-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-primario);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 16px;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.postal {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.postal-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.postal-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.welcome-btn {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-primario);
+  background-color: var(--color-secundario);
+  width: 53%;
+  max-width: 260px;
+  padding: 12px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s, transform 0.15s;
+}
+
+.welcome-btn:active {
+  transform: translateX(-50%) scale(0.97);
+}
+
+.bienvenida-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .postal {
+    max-width: 420px;
+  }
+}
+
+/* ---- HERO ---- */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/img_del-leo_hero.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(58, 48, 47, 0.55);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 340px;
+}
+
+.hero-image-container {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.hero-img {
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+  padding-bottom: 110px;
+}
+
+.hero-title {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+  line-height: 1.4;
+  letter-spacing: 1.2px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-bajada {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1.5px dashed #fff;
+  width: 70%;
+  max-width: 200px;
+  padding: 10px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+}
+
+/* ---- NOS CASAMOS ---- */
+.nosCasamos {
+  position: relative;
+  width: 100%;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../img/img_del-leo_bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.info-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-container {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.icon {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.frase {
+  font-family: "Corinthia", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 38px;
+  color: var(--color-secundario);
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.txt {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-secundario);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* ---- NUESTRO VIAJE ---- */
+.nuestroViaje {
+  width: 100%;
+  background-color: #fff;
+  padding: 50px 16px 120px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.nuestroViaje-container {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo {
+  font-family: "Abhaya Libre", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  color: var(--color-acento-claro);
+  margin-bottom: 20px;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 110px;
+  gap: 15px;
+  width: 100%;
+}
+
+.foto-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecerSuave 0.8s ease forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.foto-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.foto-chica-1 { grid-column: 1; grid-row: 1; }
+.foto-chica-2 { grid-column: 1; grid-row: 2; }
+.foto-grande-1 { grid-column: 2; grid-row: 1 / span 2; }
+
+.foto-grande-2 { grid-column: 1; grid-row: 3 / span 2; }
+.foto-chica-3 { grid-column: 2; grid-row: 3; }
+.foto-chica-4 { grid-column: 2; grid-row: 4; }
+
+.foto-banner-final {
+  position: relative;
+  grid-column: 1 / span 2;
+  grid-row: 5;
+  height: 180px;
+}
+
+.banner-img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/img_del-leo_galeria-7.jpeg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.74);
+  z-index: 2;
+}
+
+.banner-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.banner-frase {
+  font-family: "Abhaya Libre", serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #f9f5ed;
+  line-height: 1.4;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+
+@keyframes aparecerSuave {
+  to {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+/* ---- INVITACIÓN ---- */
+.invitacion {
+  position: relative;
+  width: 100%;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../img/img_del-leo_bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.fu-container {
+  width: 100%;
+  margin-top: 15px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.fecha-bloque {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.fecha-columna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fecha-central {
+  flex: 1.2;
+}
+
+.fecha-divisor {
+  width: 1px;
+  height: 40px;
+  background-color: var(--color-acento-claro);
+}
+
+.fecha-texto-secundario {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-secundario);
+  font-weight: 700;
+}
+
+.fecha-numero {
+  font-family: "Abhaya Libre", serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--color-secundario);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.fecha-mes {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-secundario);
+  font-weight: 700;
+}
+
+.ubicacion-bloque {
+  margin-bottom: 25px;
+}
+
+.ubicacion-lugar {
+  font-family: "Abhaya Libre", serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-secundario);
+  margin-bottom: 6px;
+}
+
+.ubicacion-direccion {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: var(--color-secundario);
+  letter-spacing: 0.5px;
+}
+
+.btn-mapa {
+  color: var(--color-primario);
+  background-color: var(--color-secundario);
+  color: #fff;
+  text-decoration: none;
+  width: 85%;
+  max-width: 240px;
+  padding: 12px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+
+.btn-mapa:active {
+  transform: scale(0.97);
+}
+
+
+/* ---- CUENTA REGRESIVA ---- */
+.cuentaRegresiva {
+  position: relative;
+  width: 100%;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.dresscode-txt {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-secundario);
+  letter-spacing: 1px;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+.countdown-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 45px;
+}
+
+.number {
+  font-family: "Abhaya Libre", serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--color-secundario);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-acento-oscuro);
+  opacity: 0.8;
+}
+
+.separator {
+  font-family: "Abhaya Libre", serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-secundario);
+  line-height: 1;
+  padding-top: 2px;
+  opacity: 0.5;
+}
+
+
+/* ---- RSVP ---- */
+.rsvp-card {
+  background-color: rgba(186, 165, 119, 0.35);
+  width: 100%;
+  max-width: 360px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/* Campos */
+.field-group {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.field-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-secundario);
+  margin-bottom: 5px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input-text, .text-area {
+  width: 100%;
+  background: var(--color-primario);
+  border: none;
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: var(--color-secundario);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.text-area {
+  height: 55px;
+  resize: none;
+}
+
+/* Opciones Radio */
+.radio-row {
+  display: flex;
+  gap: 8px;
+}
+
+.radio-option {
+  flex: 1;
+  position: relative;
+}
+
+.radio-option input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-btn-ui {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 6px;
+  background: var(--color-primario);
+  border: none;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-secundario);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.radio-option input:checked + .radio-btn-ui {
+  background: var(--color-acento-oscuro);
+  color: var(--color-primario);
+  font-weight: 600;
+}
+
+/* Botón Guardar */
+.submit-btn {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  color: var(--color-primario);
+  background-color: var(--color-secundario);
+  padding: 12px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s, transform 0.15s;
+  display: block;
+}
+
+.submit-btn:active {
+  transform: scale(0.97);
+}
+
+/* ---- REGALOS ---- */
+.regalos {
+  position: relative;
+  width: 100%;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.gift-container {
+  width: 100%;
+  max-width: 360px;
+}
+
+.alias-section {
+  margin-bottom: 14px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-acento-oscuro);
+}
+
+.copy-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-primario);
+  border: 2px solid var(--color-acento-oscuro);
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.copy-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-secundario);
+  letter-spacing: 0.5px;
+  word-break: break-all;
+  padding-right: 8px;
+}
+
+.copy-btn {
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  border: none;
+  padding: 7px 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  outline: none;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.copy-btn:active {
+  transform: scale(0.95);
+}
+
+.copy-btn.copied {
+  background-color: var(--color-acento-oscuro);
+}
+
+.plain-data {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 4px;
+}
+
+.data-line {
+  font-size: 12px;
+  color: var(--color-secundario);
+  line-height: 1.4;
+}
+
+.data-line strong {
+  font-weight: 600;
+}
