@@ -56,7 +56,7 @@ updateCountdown();
 const timerInterval = setInterval(updateCountdown, 1000);
 
 
-// RSVP (Con la corrección de CORS para Google Sheets)
+// RSVP (Con mensaje personalizado de éxito)
 const rsvpForm = document.getElementById('rsvpForm');
 const submitBtn = document.getElementById('submitBtn');
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzfcrTOskR-Fe9ja6qfDl158mBU5ANE-ydQydU3GtkeA0H4EM33XaQefwPLu3hBrxGZQA/exec';
@@ -71,7 +71,8 @@ if (rsvpForm) {
 
     fetch(scriptURL, { method: 'POST', body: new FormData(rsvpForm), mode: 'no-cors'})
       .then(() => {
-        alert("¡Gracias por confirmar tu asistencia!");
+        // Mensaje personalizado para tus invitados
+        alert("¡Muchas gracias por confirmar! Tu respuesta fue guardada con éxito.");
         rsvpForm.reset();
         submitBtn.innerText = "GUARDAR RESPUESTA";
         submitBtn.disabled = false;
