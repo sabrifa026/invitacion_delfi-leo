@@ -25,7 +25,10 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--color-primario);
+  background-color: #fff;
+  background-image: url('../img/img_del-leo_bg2.png');
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +60,7 @@ body {
 
 .welcome-btn {
   position: absolute;
-  bottom: 80px;
+  bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
   color: var(--color-primario);
