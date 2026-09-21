@@ -56,7 +56,7 @@ updateCountdown();
 const timerInterval = setInterval(updateCountdown, 1000);
 
 
-// RSVP (Con mensaje personalizado de éxito)
+// RSVP (Sin alertas nativas, muestra un mensaje integrado)
 const rsvpForm = document.getElementById('rsvpForm');
 const submitBtn = document.getElementById('submitBtn');
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzfcrTOskR-Fe9ja6qfDl158mBU5ANE-ydQydU3GtkeA0H4EM33XaQefwPLu3hBrxGZQA/exec';
@@ -65,17 +65,12 @@ if (rsvpForm) {
   rsvpForm.addEventListener('submit', e => {
     e.preventDefault();
     
-    // Cambiamos el texto del botón para dar feedback visual de carga
     submitBtn.innerText = "ENVIANDO...";
     submitBtn.disabled = true;
 
     fetch(scriptURL, { method: 'POST', body: new FormData(rsvpForm), mode: 'no-cors'})
       .then(() => {
-        // Mensaje personalizado para tus invitados
-        alert("¡Muchas gracias por confirmar! Tu respuesta fue guardada con éxito.");
-        rsvpForm.reset();
-        submitBtn.innerText = "GUARDAR RESPUESTA";
-        submitBtn.disabled = false;
+        rsvpHacerExito(); // Llama a la función que muestra el texto lindo
       })
       .catch(error => {
         console.error('Error!', error);
@@ -84,6 +79,16 @@ if (rsvpForm) {
         submitBtn.disabled = false;
       });
   });
+}
+
+function rsvpHacerExito() {
+  rsvpForm.reset();
+  submitBtn.innerText = "¡ENVIADO CON ÉXITO! 🎉";
+  submitBtn.style.backgroundColor = "#baa577"; // Un color verde sutil de éxito (podes adaptarlo a tu paleta)
+  submitBtn.style.color = "#fff";
+  
+  // Opcional: deshabilita el botón permanentemente para que no envíen doble
+  submitBtn.disabled = true; 
 }
 
 
